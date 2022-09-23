@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      header {
+        padding: 2%;
+        background-color: #505050;
+        text-align: right;
+        font-size: 180%;
+        color: white;
+      }
+      /*
+        nav{
+            background-color: gray;
+            padding:1%;
+        }    
+        
+        
+        .navBar a:link, .navBar a:visited{
+            color: white;
+        }
+        .navBar a:active,.navBar a:hover{
+            background-color: black;
+        } 
+        a[class="navlink1"]:hover+.dropdownBox1, a[class="navlink1"]:active+.dropdownBox1{
+            display: block;
+            position:fixed;
+            margin-left:60px;
+            padding-left: 10px;
+            padding:3px;
+        }
+        a[class="navlink2"]:hover+.dropdownBox2, a[class="navlink2"]:active+.dropdownBox2{
+            display: block;
+            position:fixed;
+            margin-left:115px;
+            padding-left: 10px;
+            padding:3px;
+        }
+        .dropdownBox1:hover{
+            display: block;
+            position:fixed;
+            padding-left: 10px;
+            margin-left:60px;
+            padding:3px;
+        }
+        .dropdownBox2:hover{
+            display: block;
+            position:fixed;
+            padding-left: 10px;
+            margin-left:115px;
+            padding:3px;
+        }
+*/
+      ul[class^="dropdownBox"] {
+        display: none;
+        list-style: none;
+        background-color: lightgray;
+        position: fixed;
+      }
+      li a {
+        text-decoration: none;
+        margin: 2px;
+        color: steelblue;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        padding: 1%;
+        text-align: center;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: #7f7f7f;
+        z-index: -1;
+      }
+
+      .topnav > a {
+        float: left;
+        color: #f2f2f2;
+
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 22px;
+        z-index: -1;
+      }
+
+      .topnav a:hover {
+        background-color: black;
+        color: white;
+      }
+
+      .topnav a.active {
+        background-color: black;
+        color: white;
+      }
+      .dropdownBox11 {
+        margin-left: 85px;
+        width: 200px;
+        height: 8%;
+        margin-top: 47px;
+        position: fixed;
+      }
+      .dropdownBox22 {
+        margin-left: 248px;
+        width: 200px;
+        height: 13%;
+        margin-top: 47px;
+        position: fixed;
+      }
+
+      a[class="navlink1"]:hover + .dropdownBox11,
+      a[class="navlink1"]:active + .dropdownBox11 {
+        display: block;
+
+        /*
+            position:float;
+            margin-left:60px;
+            padding-left: 10px;
+            padding:3px;
+            */
+      }
+      a[class="navlink2"]:hover + .dropdownBox22,
+      a[class="navlink2"]:active + .dropdownBox22 {
+        display: block;
+        /*
+            margin-left:115px;
+            padding-left: 10px;
+            padding:3px;
+            */
+      }
+      .dropdownBox11:hover {
+        display: block;
+        /*
+            padding-left: 10px;
+            margin-left:60px;
+            padding:3px;
+            */
+      }
+      .dropdownBox22:hover {
+        display: block;
+        /*
+            padding-left: 10px;
+            margin-left:115px;
+            padding:3px;
+            */
+      }
+
+      #mainContent1 {
+        justify-content: center;
+        margin: auto;
+        border: 2px solid steelblue;
+        min-width: 600px;
+        min-height: 450px;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body onload="load_home()">
+    <header>
+      <h1>Pharmacy</h1>
+    </header>
+    <!--
+    <nav class="navBar">
+        <a href="#" >Home</a>
+        <a href="##" class="topnavlink1">Our Medicines</a>
+        <div class="dropdownBox1" >
+            <a href="####" >DD_Link_1</a><br/>
+            <a href="#####">DD_Link_2</a><br/>
+            <a href="######">DD_Link_3</a>
+        </div>
+        <a href="###" class="topnavlink2">Health Care</a>       
+        <div class="dropdownBox2">
+            <a href="####">DD_Link_1</a><br/>
+            <a href="#####">DD_Link_2</a><br/>
+            <a href="######">DD_Link_3</a>
+        </div>
+        <a href="#" >Lab Test</a>
+    </nav>-->
+    <div class="topnav">
+      <a href="#home" onclick="load_home()">Home</a>
+
+      <a class="navlink1" href="#meds">Our Medicines</a>
+      <ul class="dropdownBox11">
+        <li><a href="#fever">Fever</a></li>
+        <li><a href="#pain">Muscle Pain</a></li>
+        <li><a href="#cnc">Cough and Cold</a></li>
+      </ul>
+      <a class="navlink2" href="#healthcare">Health Care</a>
+      <ul class="dropdownBox22">
+        <li><a href="#Baby">Baby Care</a></li>
+        <li><a href="#Skin">Skin Care</a><br /></li>
+        <li><a href="#Home">Home Care</a><br /></li>
+        <li><a href="#Pers">Personal Care</a><br /></li>
+        <li><a href="#Pet">Pet Care</a></li>
+      </ul>
+      <a
+        href="LabTestForm.html"
+        target="popup"
+        onclick="window.open('LabTestForm.html','popup','width=1700px,height=900px'); return false;"
+        >Lab Test</a
+      >
+    </div>
+    <div id="mainContent1" width="100%"></div>
+
+    <footer>&copy; Copyright. Only for demonstration purposes</footer>
+
+    <script defer type="text/javascript">
+      function load_home() {
+        console.log(document.getElementById("mainContent1"));
+        document.getElementById("mainContent1").innerHTML =
+          '<object width="100%" height="100%" type="type/html" data="mainBody_index.html" ></object>';
+      }
+
+      window.onload = function () {
+        document.getElementById("mainContent1").innerHTML =
+          '<object width="100%" height="100%" type="type/html" data="mainBody_index.html" ></object>';
+      };
+    </script>
+  </body>
+</html>
